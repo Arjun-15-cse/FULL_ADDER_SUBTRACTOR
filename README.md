@@ -1,9 +1,10 @@
-# FULL_ADDER_SUBTRACTOR
+**EXP4:FULL ADDER AND SUBTRACTOR**
 
-Implementation-of-Full-Adder-and-Full-subtractor-circuit
+NAME: ARJUN.K
 
-**AIM:**
+REFERENCE NO: 24900977
 
+**AIM**
 To design a Full Adder and Full Subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
 **Equipments Required:**
@@ -38,18 +39,84 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+FULL ADDER
+
+![image](https://github.com/user-attachments/assets/a80a8cc5-b16d-42b5-849e-f35dda4a66e1)
+
+
+FULL SUBRACTOR
+
+![image](https://github.com/user-attachments/assets/840f4298-3f66-4d84-b5ed-9a3d20b63c77)
+
+
 **Procedure**
 
-Write the detailed procedure here
+1.	Type the program in Quartus software.
+
+2.	Compile and run the program.
+
+3.	Generate the RTL schematic and save the logic diagram.
+
+4.	Create nodes for inputs and outputs to generate the timing diagram.
+
+5.	For different input combinations generate the timing diagram.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+
+FULL ADDER
+
+module fulladder(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^cin);
+
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+
+endmodule
+
+FULL SUBRACTOR
+
+module fullsubractor(a,b,bin,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( a & b)| ( bin & ((a ^ b ))));
+
+endmodule
+
 
 **RTL Schematic**
 
+FULL ADDER
+
+![WhatsApp Image 2024-12-04 at 16 07 53_1f018637](https://github.com/user-attachments/assets/af1f75b1-ee7d-45e1-a1c4-335cfd19359c)
+
+
+FULL SUBRACTOR
+
+![WhatsApp Image 2024-12-04 at 16 09 36_59aa61e2](https://github.com/user-attachments/assets/b2c294dd-db63-43fa-b743-1a956c25988d)
+
+
 **Output Timing Waveform**
+
+FULL ADDER
+
+![WhatsApp Image 2024-12-04 at 16 09 00_a7b123e3](https://github.com/user-attachments/assets/05953c96-5221-47f6-84f4-27f72ec6a98f)
+
+
+FULL SUBRACTOR
+
+![WhatsApp Image 2024-12-04 at 16 10 25_34ab39e7](https://github.com/user-attachments/assets/c27dc018-47a8-4720-baf7-d8df1bac98d0)
+
 
 **Result:**
 
